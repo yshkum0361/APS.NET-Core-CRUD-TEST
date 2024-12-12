@@ -15,6 +15,7 @@
         <th>Name</th>
         <th>Phone Number</th>
         <th>Subject</th>
+                <th>Reg Status</th>
         <th>Edit Record</th>
 
             <th>Delete Record</th>
@@ -28,6 +29,7 @@
                 <td>@student.Name</td>
                 <td>@student.Phone</td>
                 <td>@student.Subject</td>
+                    <td>@student.Status</td>
                 <td><a asp-controller="Student" asp-action="Edit" asp-route-id="@student.Id" class="btn btn-primary">Edit</a></td>
                     <td><button asp-controller="Student" type="submit" asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</button></td>
              </tr>

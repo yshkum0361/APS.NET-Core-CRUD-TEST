@@ -30,6 +30,7 @@ namespace SecondASPcorePractice.Controllers
                 Name = addStudent.Name,
                 Phone = addStudent.Phone,
                 Subject = addStudent.Subject,
+                Status  = addStudent.Status,
             };
             await applicationDbContext.studentEnrollment.AddAsync(student);
 
@@ -78,6 +79,7 @@ namespace SecondASPcorePractice.Controllers
             Student.Name = studentEnroll.Name;
             Student.Phone = studentEnroll.Phone;
             Student.Subject = studentEnroll.Subject;
+            Student.Status = studentEnroll.Status;
             await applicationDbContext.SaveChangesAsync();
 
             return RedirectToAction("List","Student");
